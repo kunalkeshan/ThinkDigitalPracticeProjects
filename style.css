@@ -41,6 +41,7 @@ div.heading img{
     height: auto;
     margin: 10px;
     border-radius: 7px;
+    transition: width 1s;
 }
 div.heading a h1{
     font-size: 2.3em;
@@ -69,6 +70,7 @@ div.pracPro p{
     margin-bottom: 25px;
     font-weight: 800;
     margin-right: 30px;
+    transition: font-size 1s;
 }
 div.pracPro p span{
     background-color: #fff;
@@ -91,4 +93,50 @@ div.grid a{
     font-weight: 600;
     background-color: rgb(243, 107, 107);
     margin: 10px;
+    transform: font-size 1s, height 1s, width 1s;
+}
+div.grid a:nth-child(even){
+    background-color: rgb(248, 64, 64);
+}
+div.grid a:hover{
+    transform: scale(1.1, 1.1);
+    background-color: royalblue;
+}
+/* -------------------------------------------- */
+            /* Responsive Styling */
+/* -------------------------------------------- */
+@media (min-width: 420px) and (max-width: 600px){
+    div.grid a{
+        width: 160px;
+        height: 200px;
+        font-size: 20px;
+    }
+    div.heading a h1{
+        font-size: 2em;
+    }
+    div.heading img{
+        width: 40px;
+    }
+    div.heading a h1:hover{
+        font-size: 2.2em;
+    }
+}
+@media (max-width: 420px){
+    div.grid a{
+        width: 100px;
+        height: 160px;
+        font-size: 15px;
+    }
+    div.pracPro p{
+        font-size: 30px;
+    }
+    div.heading a h1{
+        font-size: 1.6em;
+    }
+    div.heading img{
+        width: 35px;
+    }
+    div.heading a h1:hover{
+        font-size: 2em;
+    }
 }

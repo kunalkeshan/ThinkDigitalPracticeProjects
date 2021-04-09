@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'BioRhyme', serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100vh;
+}
+/* ------------------------------------------------------- */
+        /* NAV SECTION */
+/* ------------------------------------------------------- */
+section#nav{
+    position: fixed;
+    top:0px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(224, 106, 9);
+    box-shadow: 0px 0px 5px 3px #000;
+    z-index: 1;
+}
+section#nav:hover{
+    background-color: rgb(255, 115, 0);
+    box-shadow: 0px 0px 5px 5px rgb(114, 113, 113);
+}
+section#nav div.heading{
+    position: fixed;
+    left: 150px;
+    font-size: xx-large;
+    transition: left 1s,  font-size 1s;
+}
+section#nav div.forSearch{
+    position: fixed;
+    right: 150px;
+    transition: right 1s;
+}
+input#search{
+    width: 250px;
+    height: 30px;
+    border-radius: 7px;
+    outline: none;
+    text-align: center;
+    font-size: 20px;
+    transition: width 1s,  font-size 1s;
+}
+input.searchBtn{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: width 1s,  font-size 1s;
+}
+@media(max-width: 800px){
+    section#nav div.heading{
+        font-size: x-large;
+        left: 85px;
+    }
+    input#search{
+        width: 200px;
+        font-size: 18px;
+    }
+    input.searchBtn{
+        width: 50px;
+        font-size: 12px;
+    }
+    section#nav div.forSearch{
+        right: 85px;
+    }
+}
+/* ------------------------------------------------------- */
+        /* MAIN SECTION */
+/* ------------------------------------------------------- */
+
+section#main{
+    position: absolute;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #afeeee;
+    width: 100%;
+    height: 100%;
+}
+div.newTask{
+    position: absolute;
+    top: 80px;
+}
+input.TaskName{
+    width: 350px;
+    height: 40px;
+    border-radius: 7px;
+    outline: none;
+    text-align: center;
+    font-size: 20px;
+}
+input.TaskName:focus{
+    border: 2px solid rgb(224, 106, 9);
+}
+input.addBtn{
+    width: 60px;
+    height: 40px;
+    border-radius: 7px;
+    outline: none;
+    font-size: 20px;
+}
+div.btn input{
+    width: 40px;
+    height: 30px;
+    border-radius: 7px;
+    outline: none;
+    font-weight: 1000;
+}
+input[type="button"]:hover{
+    background-color: #808080;
+    cursor: pointer;
+}
+ul.taskList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 150px;
+}
+ul.taskList li{
+    width: 350px;
+    height: 40px;
+    background-color: chocolate;
+    margin: 10px;
+    text-align: left;
+    padding: 7px 0px 5px 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+}
+ul.taskList li:nth-child(even){
+    background-color: cadetblue;
+}
+ul.taskList li:hover{
+    background-color: burlywood;
+    transform: scale(1.1, 1.1);
+}
+ul.taskList li.complete{
+    text-decoration: line-through;
+}
+div.delete{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0px 10px 1px 10px;
+    font-size: 25px;
+    background-color: red;
+    border-radius: 0px 3px 3px 0px;
+}
+div.delete:hover{
+    color: white;
+}
+div.complete{
+    position: absolute;
+    top: 0px;
+    right: 33px;
+    font-size: 21px;
+    background-color: green;
+    padding:3px 10px 4px 10px;
+}
+div.complete:hover{
+    color: white;
+}
+/* ------------------------------------------------------- */
+        /* FOOTER SECTION */
+/* ------------------------------------------------------- */
+section#footer{
+    position: fixed;
+    bottom: 0px;
+    background-color: rgb(224, 106, 9);
+    box-shadow: 0px 0px 5px 3px #000;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#footer:hover{
+    background-color: rgb(255, 115, 0);
+    box-shadow: 0px 0px 5px 5px rgb(114, 113, 113);
+}
+section#footer a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+}
+section#footer a:hover{
+    text-decoration: underline;
+    font-size: 15px;
+}

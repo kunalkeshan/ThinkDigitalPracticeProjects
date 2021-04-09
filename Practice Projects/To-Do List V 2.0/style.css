@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Patrick Hand', cursive;
+}
+body{
+    max-height: 100vh;
+    background-color: #000;
+}
+#particles-js{
+    background-color: #FF6D6D;
+    height: 95vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+/*  TABLE OF CONTENTS
+
+1. Nav Bar 
+2. Main
+3. Footer
+
+*/
+/* ---------------------------------------------------------------------------- */
+    /* Nav Bar */
+/* ---------------------------------------------------------------------------- */
+
+section#nav{
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+}
+h1.heading{
+    font-size: 2.5em;
+    position: absolute;
+    left: 10%;
+    transition: font-size 1s, left 1s, position 1s;
+}
+h1.heading:hover{
+    font-size: 2.6em;
+}
+input#search{
+    position: absolute;
+    right: 10%;
+    width: 400px;
+    height: 35px;
+    text-align: center;
+    font-size: 1.7em;
+    border-radius: 5px;
+    border: 2px solid #000;
+    outline: none;
+    transition: width 1s, right 1s, position 1s;
+}
+input#search:focus{
+    box-shadow: 0px 0px 5px 1px #808080;
+}
+input#search:focus::placeholder{
+    color: transparent;
+}
+input#search:hover::placeholder{
+    color: transparent;
+}
+/* ---------------------------------------------------------------------------- */
+    /* Main */
+/* ---------------------------------------------------------------------------- */
+section#main{
+    position: absolute;
+    top: 60px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: top .3s;
+}
+div.addTask, form{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: relative;
+    transition: flex-direction 1s;
+}
+div.addTask input#taskName{
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    font-size: 2.3em;
+    margin: 10px;
+    border-radius: 15px;
+    border: 1px solid #000;
+    outline: none;
+    transition: width 1s, font-size 1s;
+}
+input#taskName::placeholder{
+    color: #000;
+}
+input#taskName:hover{
+    box-shadow: 0px 0px 3px #fff;
+}
+input#taskName:hover::placeholder{
+    color: transparent;
+}
+input#taskName:focus{
+    box-shadow: 0px 0px 3px #fff;
+}
+input#taskName:focus::placeholder{
+    color: transparent;
+}
+button#addBtn{
+    width: 70px;
+    height: 45px;
+    font-size: 1.5em;
+    background-color: rgb(214, 235, 255);
+    border: 1px solid #000;
+    border-radius: 5px;
+    outline: none;
+}
+button#addBtn:hover{
+    cursor: pointer;
+}
+ul.taskList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px;
+    width: 500px;
+    list-style-type: none;
+}
+ul.taskList li{
+    position: relative;
+    background-color: #fff;
+    width: 450px;
+    height: 40px;
+    align-items: center;
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: width 1s, font-size 1s;
+}
+ul.taskList li:hover{
+    transform: scale(1.1, 1.1);
+    background-color: rgb(189, 189, 189);
+}
+ul.taskList li:nth-child(even){
+    background-color: rgb(255, 241, 162);
+}
+ul.taskList li:nth-child(even):hover{
+    background-color: rgb(248, 223, 79);
+}
+div.del{
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    right: 0px;
+    width: 30px;
+    height: 100%;
+    border-radius: 0px 5px 5px 0px;
+    font-size: x-large;
+    font-weight: 600;
+    color: rgba(254, 0, 0, 1);
+}
+div.comp{
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    right: 30px;
+    width: 28px;
+    height: 100%;
+    font-size: x-large;
+    font-weight: 600;
+    color: #0f0;
+}
+div.del:hover, div.comp:hover{
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------------------------------- */
+    /* Footer */
+/* ---------------------------------------------------------------------------- */
+section#foot{
+    position: fixed;
+    bottom: 0px;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    height: 20px;
+}
+/* ---------------------------------------------------------------------------- */
+    /* Responsive */
+/* ---------------------------------------------------------------------------- */
+@media (min-width: 600px) and (max-width: 800px){
+    input#search{
+        width: 300px;
+        right: 8%;
+    }
+    h1.heading{
+        font-size: 2em;
+        left: 8%;
+    }
+    h1.heading:hover{
+        font-size: 2.2em;
+    }
+}
+@media (max-width: 600px){
+    section#nav{
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 100px;
+    }
+    section#main{
+        top: 100px;
+    }
+    h1.heading{
+        top: 0px;
+        position: unset;
+        font-size: 1.9em;
+    }
+    h1.heading:hover{
+        font-size: 2.1em;
+    }
+    input#search{
+        bottom: 5px;
+        width: 300px;
+        position: unset;
+    }
+    div.addTask, form{
+        flex-direction: column;
+    }
+    div.addTask input#taskName{
+        width: 400px;
+        font-size: 1.8em;
+    }
+    ul.taskList li{
+        width: 375px;
+        font-size: 1.4em;
+    }
+}

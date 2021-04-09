@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+body{
+    background: rgb(241, 44, 44) url("background.jpeg") no-repeat fixed center;
+    background-size: 100%  100%;
+    font-family: 'Yusei Magic', sans-serif;
+    overflow-x: hidden;
+}
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.ifYes{
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+input[type="radio"]#student-yes:checked ~ .ifYes{
+    opacity: 1;
+    max-height: 100px;
+    overflow: visible;
+}
+
+.logo_main{
+    width: 300px;
+    height: auto;
+}
+label{
+    display: block;
+    margin: 10px 0 10px 0;
+}
+label[for="student-yes"]{
+    display: inline !important;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 12px;
+    max-width: 100%;
+    min-height: 90vh;
+}
+.container .col{
+    position: relative;
+    margin: 0 auto;
+}
+.container .one{
+    margin: 0 auto;
+}
+.container .two{
+    margin: 5%;
+}
+.container .one h1{
+    margin-top: 10px;
+    font-weight: 1000;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+
+}
+
+.container .two .signup-form{
+    background: rgba(241, 36, 36, 1);
+    width: 600px;
+    height: auto;
+    padding: 20px 20px 0 20px;
+    box-shadow: 0px 0px 30px  #fff;
+    border-radius: 10px;
+    font-size: 1.4em;
+    font-weight: 700;
+    text-align: center;
+}
+.container .two .signup-form:hover,
+.container .one h1{
+    box-shadow: 0px 0px 50px #000;
+}
+hr {
+    border:solid 1px black;
+    width: 96%;
+    color: #FFFF00;
+    height: 1px;
+  }
+.container .two .signup-form label #email:focus,
+.container .two .signup-form label #name:focus,
+.container .two .signup-form label #username:focus,
+.container .two .signup-form label #dob:focus,
+.container .two .signup-form label #password:focus,
+.container .two .signup-form label #passwordReenter:focus,
+.container .two .signup-form label #uniName:focus,
+.container .two .signup-form label #branch:focus{
+    border:  2px solid rgb(255, 255, 0);
+    box-shadow: 0px 0px 10px  rgb(255, 255, 0);
+}
+input[type="text"], input[type="date"], input[type="email"]{
+    position: relative;
+}
+.container .two .signup-form #email,
+.container .two .signup-form #name,
+.container .two .signup-form #username,
+.container .two .signup-form #password,
+.container .two .signup-form #passwordReenter,
+.container .two .signup-form #uniName,
+.container .two .signup-form #branch{
+    margin-bottom: 10px;
+    width: 50%;
+    border: 1px solid rgb(255, 115, 0);
+    border-radius: 5px;
+    outline: none;
+    padding: 15px 20px;
+    color: #080808;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 17px;
+    text-align: center;
+    font-family: 'Yusei Magic', sans-serif;
+}
+.container .two .signup-form #dob{
+    appearance: none;
+    -webkit-appearance: none;
+    color: #000;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 18px;
+    border:1px solid #ecf0f1;
+    background:#ecf0f1;
+    padding:5px;
+    display: inline-block !important;
+    visibility: visible !important;
+    border-radius: 5px;
+    width: 70%;
+    position: relative;
+    text-align: center;
+}
+.container .two .signup-form #submit{
+    margin: 50px 0px  20px 0px;
+    padding: 20px 10px 20px 10px;
+    border-radius: 7px;
+    background-color: #FFFF00;
+    color: #000;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: 'Yusei Magic', sans-serif;
+}
+#submit:hover{
+    cursor: pointer;
+    border: 1px solid #000;
+}

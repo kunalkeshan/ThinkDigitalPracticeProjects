@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'New Tegomin', serif;
+}
+body{
+    max-height: 100vh;
+    background-color: #fff;
+
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* -------------------------------------------- */
+            /* Nav Bar Styling */
+/* -------------------------------------------- */
+
+section#nav{
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    background-color: rgb(243, 107, 107);
+    justify-content: center;
+}
+div.heading a{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+div.heading img{
+    width: 50px;
+    height: auto;
+    margin: 10px;
+    border-radius: 7px;
+}
+div.heading a h1{
+    font-size: 2.3em;
+    transition: font-size 1s;
+}
+div.heading a h1:hover{
+    font-size: 2.5em;
+}
+div.heading img:hover{
+    transform: scale(1.1, 1.1);
+}
+
+/* -------------------------------------------- */
+            /* Main Styling */
+/* -------------------------------------------- */
+
+section#main{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+}
+div.pracPro p{
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    font-size: 35px;
+    margin-bottom: 25px;
+    font-weight: 800;
+    margin-right: 30px;
+}
+div.pracPro p span{
+    background-color: #fff;
+    padding: 0px 10px 0px 10px;
+}
+div.grid{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+div.grid a{
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: rgb(243, 107, 107);
+    margin: 10px;
+}

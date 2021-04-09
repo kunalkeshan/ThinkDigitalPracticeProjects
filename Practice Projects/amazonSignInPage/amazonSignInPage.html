@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="amazonSignInPage.css">
+    <link rel="icon" href="Amazon_icon.png">
+    <title>Amazon Sign In</title>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script> -->
+</head>
+<body> 
+    <div class="container disp">
+        <div class="top disp">
+            <a href="#" class="logoLink"><img src="Amazon-India-Logo.png" class="logo" alt="Image of Amazon India Logo"></a>
+            <div class="main">
+                <h1 class="signin">Sign-In</h1>
+                <p class="email">Email or Mobile phone number</p>
+                <form action="#" class="signInForm" id="SignIn">
+                    <div class="user">
+                        <input type="text" id="Email" class="emailMob" placeholder="Email or Phone Number"><br><br>
+                        <small>Error</small>
+                        <button type="submit" class="error">Continue</button>
+                    </div>
+                </form>
+                <small class="tc">
+                    By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice.</a>
+                </small>
+                <div class="arrow"></div>
+                <a href="#" class="help">Need help?</a>
+            </div>
+            <div class="new">
+                <p><span>New to Amazon?</span></p>
+                <a href="#" class="newAccount">Create your Amazon account</a>
+            </div>
+        </div>
+        <div class="bottom disp">
+            <a href="#"><small>Conditions of Use</small></a>
+            <a href="#"><small>Privacy Notice</small></a>
+            <a href="#"><small>Help</small></a>
+            <p class="end">&#169 1996-2021, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </div>
+</body>
+<script src="amazonSignInPage.js"></script>
+</html>

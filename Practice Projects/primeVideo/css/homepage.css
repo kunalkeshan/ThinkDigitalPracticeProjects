@@ -1,0 +1,531 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(#0F171E, #000000);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+                           /* Nav bar of Website */
+
+                           /* Nav bar Left */
+
+img.headerLogo{
+    width: 200px;
+    height: auto;
+    margin-right: -30px;
+}
+header div.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    top: 0px;
+    background-color: #1B2530;
+    z-index: 1;
+}
+header div.navBar div.navLeft a{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+    font-size: 17px;
+}
+header div.navBar div.navLeft a:focus{
+    text-decoration: underline;
+    font-size: 19px;
+}
+header div.navLeft{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+                              /* Nav bar Right */
+
+header div.navRight{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header div.navRight input.navSearch{
+    padding: 8px 24px 8px 8px;
+    /* text-align: center; */
+    background-color: #1B2530;
+    border: 1px solid #808080;
+    font-size: 17px;
+    border-radius: 2px;
+    font-weight: 700;
+    margin-right: 30px;
+}
+header div.navRight input.navSearch::placeholder{
+    opacity: 1;
+    color: rgb(153, 149, 149);
+}
+header div.navRight input.navSearch:focus{
+    background-color: #131414;
+    color:rgb(153, 149, 149);
+    outline: none;
+    border: 1px solid #fff;
+}
+div.navRight form{
+    position: relative;
+}
+header div.navRight img.navSearchIcon{
+    width: 25px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+}
+input.navSearch:focus~img.navSearchIcon,input.navSearch:focus input.navSearch::placeholder{
+    opacity: 0;
+}
+
+                            /* Nav bar Right User Toggle */
+
+div.navRight div.navUser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+    margin-right: 30px;
+    position: relative;
+}
+img.profilePic{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 5px;
+}
+a.user{
+    text-decoration: none;
+    color:#808080;
+    margin-left: 5px;
+}
+a.user:hover, div.navUser:hover a.user{
+    color: #fff;
+}
+div.userInfo{
+    visibility: hidden;
+    min-width: 370px;
+    height: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 65px;
+    right: 28px;
+    box-shadow: 0px 0px 7px;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+}
+div.navUser:hover{
+    cursor: pointer;
+}
+div.navUser:hover div.userInfo{
+    visibility: visible;
+}
+div.userInfoLeft, div.userInfoRight{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #413f3f;
+}
+div.userInfoLeft{
+    border-right: 1px solid #808080;
+    width: 185px;
+    border-radius: 12px 0px 0px 12px;
+}
+div.userInfoRight{
+    border-left: 1px solid #808080;
+    width: 185px;
+    border-radius: 0px 12px 12px 0px;
+}
+a.ui{
+    text-decoration: none;
+    font-size: 17px;
+    color: rgb(185, 182, 182);
+    margin: 10px 0px 5px 15px;
+}
+a.ui:hover{
+    color: #fff;
+}
+div.innav{
+    display: flex;
+    flex-direction: row;
+}
+img.innavimg{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin: 5px 0px 5px 5px;
+}
+header div.forPhone{
+    visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+}
+div.forPhone i{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 20px;
+}
+                            /* Responsive for Nav */
+
+@media (max-width: 1050px) {                           
+    img.navSearchIcon, div.navRight div.navUser, header div.navRight input.navSearch{
+        display: none;
+    }
+    div.forPhone i{
+        margin-top: 10px;
+    }
+    header div.forPhone{
+       visibility: visible;
+    }
+    header div.navBar div.navLeft a{
+        text-decoration: none;
+        color: #fff;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+    header div.navBar div.navLeft a:focus{
+        text-decoration: underline;
+        font-size: 17px;
+    }
+    img.headerLogo{
+        width: 150px;
+        height: auto;
+        margin-right: -20px;
+        margin-left: -10px;
+    }
+}
+@media (max-width: 500px){
+    div.forPhone i{
+        width: 25px;
+        height: 25px;
+    }
+    div.forPhone{
+        margin-left: -15px;
+    }
+    header div.navBar div.navLeft a{
+        margin-right:7px;
+        font-size: 14px;
+    }
+    header div.navBar div.navLeft a:focus{
+        text-decoration: underline;
+        font-size: 15px;
+    }
+    img.headerLogo{
+        width: 110px;
+        height: auto;
+        margin-right: -20px;
+        margin-left: -10px;
+    }
+}
+header div.navRight div.forPhone{
+    position: relative;
+}
+header div.navRight div.forPhone:hover div.inforPhone{
+    visibility: visible;
+}
+header div.navRight div.forPhone div.inforPhone{
+    display: flex;
+    position: absolute;
+    top: 40px;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1B2530;
+    width: 150px;
+    left: -75px;
+}
+header div.forPhone div.inforPhone a{
+    font-size: 14px;
+    text-align: center;
+    padding: 2px 17px 0px 0px;
+}
+
+                             /* Main part of the Website */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-width: 100%;
+    position: relative;
+    /* top: 45px; */
+}
+div.preview{
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+div.preview:hover{
+    opacity: 0.6;
+}
+div.inPrev{
+    width: 100%;
+    height: 200%;
+    display: inline-block;
+}
+div.inPrev img{
+    animation: slide 10s 15s infinite;
+}
+@keyframes slide{ 
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+div.inPrev img{
+    width: 100%;
+    height: 100%;
+
+}
+div.prevInfo{
+    position: absolute;
+    z-index: 10;
+    bottom: 25px;
+    left: 15px;
+    color: #fff;
+    visibility: hidden;
+}
+div.prevInfo i{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+div.prevInfo h2{
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+div.preview:hover div.prevInfo{
+    visibility: visible;
+}
+div.movie{
+    position: relative;
+}
+div.movInfo{
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: -15px;
+    color: #fff;
+    z-index: 2;
+    width: 350px;
+    background-color: #1B2530;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 5px #000;
+    border-radius: 0px 0px 5px 5px;
+}
+div.movInfo i{
+    width: 40px;
+    height: 40px;
+    font-size: 50px;
+    margin: 0px 0px 15px 0px;
+    position: absolute;
+    top: -30px;
+}
+div.movInfo h2{
+    margin-bottom: 5px;
+}
+div.movie:hover div.movInfo{
+    display: block;
+}
+div.mov{
+    background-color: inherit;
+    padding: 25px;
+    margin-top:30px;
+    width: 98%;
+    height: 200px;
+    position: relative;
+    /* overflow-x:visible; */
+    display: flex;
+}
+div.mov:hover div.arrow, div.title div.arrow{
+    visibility: visible;
+}
+div.arrow{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transform: translateY(-50%);
+    top: 50%;
+    visibility: hidden;
+    transition: visibility 0s ease 0.1s;
+    z-index: 2;
+}
+div.arrow button.prev{
+    height: 0;
+    width: 0;
+    border-left: 10px solid transparent;
+    border-top: 50px solid transparent;
+    border-right: 25px solid #fff;
+    border-bottom: 50px solid transparent;
+    background-color: transparent;
+    /* transform: translateY(-50%);*/
+    border-radius: 5px;
+}
+div.arrow button.next{
+    height: 0;
+    width: 0;
+    border-right: 10px solid transparent;
+    border-top: 50px solid transparent;
+    border-left: 25px solid #fff;
+    border-bottom: 50px solid transparent;
+    background-color: transparent;
+    /* transform: translateY(-50%); */
+    border-radius: 5px;
+}
+div.title{
+    color: #fff;
+    position: absolute;
+    top:-7px;
+    left: 30px;
+    font-size: 21px;
+    font-weight: 600;
+    padding-top: 7px;
+}
+div.mov div.inMov{
+    background-color: #fff;
+    height: 170px;
+    margin: 7px;
+    border-radius: 5px;
+    min-width: 300px;
+    display:inline-block;
+    position: sticky;
+    transition: min-width .5s, height .5s;
+}
+div.mov div.inMov:hover{
+    width: 350px;
+    height: 190px;
+    margin-right: -15px;
+    margin-left: -15px;
+    z-index: 1;
+    box-shadow: 0px 0px 15px 15px #000;
+}
+
+main{
+    margin-bottom: 100px;
+}
+
+                            /* Responsive for main */
+@media (max-width: 800px){
+    div.mov div.inMov{
+        min-width: 250px;
+        height: 140px;
+    }
+    div.mov div.inMov:hover{
+        width: 285px;
+        height: 160px;
+    }
+    div.mov{
+        margin-top: 20px;
+    }
+    div.movInfo{
+        top: 170px;
+        width: 285px;
+        font-size: 15px;
+    }
+    div.movInfo i{
+        top: -30px;
+    }
+}
+@media (max-width: 500px){
+    div.mov div.inMov{
+        min-width: 210px;
+        height: 110px;
+    }
+    div.mov div.inMov:hover{
+        width: 235px;
+        height: 130px;
+    }
+    main div.mov{
+        margin-top: 10px;
+        height: 150px;
+    }
+    div.movInfo{
+        top: 140px;
+        width: 245px;
+        font-size: 12px;
+    }
+    div.movInfo i{
+        top: -22px;
+        font-size: 35px;
+    }
+    div.preview{
+        height: 270px;
+    }
+}
+
+                            /* Footer Part of Website */
+
+img.footerLogo{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 0px;
+    transform: translate(-50%, -50%);
+    transition: width 1s;
+}
+div.foot{
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100vw;
+    height: 100px;
+    position: relative;
+}
+div.foot a{
+    color: #fff;
+    margin: 0px 20px 0px 20px;
+    text-decoration: none;
+    transition: font-size 1s;
+}
+p.footerEnd{
+    position: absolute;
+    color: #fff;
+    bottom: 4px;
+    transition: font-size 1s;
+}
+
+                               /* Responsive for footer */
+
+@media (max-width: 600px) and (max-height: 800px){
+img.footerLogo{
+    width: 170px;
+}
+div.foot a{
+    margin: 3px 6px 0px 6px;
+    font-size: 12px;
+}
+p.footerEnd{
+    font-size: 11px;
+}
+}

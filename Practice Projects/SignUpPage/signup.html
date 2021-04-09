@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit | Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <div class="container">
+        <div class="col one">
+            <img src="logo2.png" alt="logo" class="logo_main" />
+            <h1>The front page of the internet.</h1>
+            <table class="table-data">
+            </table>
+        </div>
+        <div class="col two">
+            <form action="#" class="signup-form">
+                <label>Name:
+                    <input type="text" id="name" placeholder="Enter your name">
+                </label>
+                <label>Username:
+                    <input type="text" id="username" placeholder="Publically Displayed Name">
+                </label>
+                <label>Email:
+                    <input type="email" id="email" placeholder="Enter your Email Id">
+                </label>
+                <label>Birthday:
+                    <input type="date" id="dob" value="2002-12-10">
+                </label>
+                <label>Password:
+                    <input type="password" id="password" placeholder="Enter new Password">
+                </label>
+                <label>Re-enter Password:
+                    <input  type="password" id="passwordReenter" placeholder="Re-enter  Password">
+                </label>
+                <label>Are You a student:
+                    <label for="student-no">No</labe>
+                        <input type="radio" id="student-no" name="student" value="no">
+                    <label for="student-yes">Yes</label>
+                        <input type="radio" id="student-yes" name="student" value="yes">
+                        <div class="ifYes">
+                        <label>School/University Name:
+                            <input type="text" value="School/Uni Name" id="uniName" placeholder="Enter School/University Name">
+                        </label>
+                        <label>Branch:
+                            <input type="text" value="Branch" id="branch" placeholder="Enter your Branch">
+                        </label>
+                        </div>
+                </label>   
+                <label>
+                    <input type="submit" id="submit" value="Create New Account">
+                </label>
+            </form>
+            <div>
+            <hr>
+            <p>Have an account?&nbsp;<a href="https://kunalkeshan.github.io/webDevelopment/projects/facebookLoginPage/index.html">Sign in.</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="signup.js"></script>
+</html>

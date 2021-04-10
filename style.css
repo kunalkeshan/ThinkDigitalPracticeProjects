@@ -80,6 +80,7 @@ div.grid{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 div.grid a{
     width: 200px;

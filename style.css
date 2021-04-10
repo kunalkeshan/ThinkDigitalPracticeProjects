@@ -93,7 +93,7 @@ div.grid a{
     font-weight: 600;
     background-color: rgb(243, 107, 107);
     margin: 10px;
-    transform: font-size 1s, height 1s, width 1s;
+    transition: font-size 1s, height 1s, width 1s;
 }
 div.grid a:nth-child(even){
     background-color: rgb(248, 64, 64);

@@ -14,9 +14,11 @@ body{
 h1.heading{
 	margin: 20px 0px 0px 0px;
 	font-size: 50px;
+	text-align: center;
 }
 h1.results{
 	margin: 0px 0px 15px 0px;
+	text-align: center;
 }
 .grid {
 	width: 300px;

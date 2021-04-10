@@ -7,6 +7,10 @@ let invadersId
 let goingRight = true
 let aliensRemoved = []
 let results = 0
+let mobRight = document.querySelector('button.moveRight')
+let mobLeft = document.querySelector('button.moveLeft')
+
+
 
 for (let i = 0; i < 225; i++) {
   const square = document.createElement('div')
@@ -131,3 +135,4 @@ function shoot(e) {
 }
 
 document.addEventListener('keydown', shoot) 
+document.querySelector('.shoot').addEventListener('click', shoot)

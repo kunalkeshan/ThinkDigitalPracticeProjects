@@ -47,3 +47,26 @@ h1.results{
 .boom {
 	background-color: red;
 }
+div.mobBtn{
+	visibility: hidden;
+}
+@media(max-width: 700px){
+	div.mobBtn{
+		visibility: visible;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 40%;
+		margin: 15px 0px 0px 0px;
+		background-color: thistle;
+		padding: 5px;
+		height: auto;
+	}
+	div.mobBtn button{
+		width: 50px;
+		height: 40px;
+		font-size: 25px;
+	}
+}

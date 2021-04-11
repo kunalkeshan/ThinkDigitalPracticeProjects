@@ -7,8 +7,6 @@ let invadersId
 let goingRight = true
 let aliensRemoved = []
 let results = 0
-let mobRight = document.querySelector('button.moveRight')
-let mobLeft = document.querySelector('button.moveLeft')
 
 
 
@@ -58,6 +56,18 @@ function moveShooter(e) {
 }
 document.addEventListener('keydown', moveShooter)
 
+document.querySelector('.moveLeft').addEventListener('click', ()=>{
+  squares[currentShooterIndex].classList.remove('shooter')
+  if(currentShooterIndex % width !== 0) currentShooterIndex -= 1
+  squares[currentShooterIndex].classList.add('shooter')
+})
+
+document.querySelector('.moveRight').addEventListener('click', ()=>{
+  squares[currentShooterIndex].classList.remove('shooter')
+  if(currentShooterIndex % width < width - 1) currentShooterIndex += 1
+  squares[currentShooterIndex].classList.add('shooter')
+})
+
 function moveInvaders() {
   const leftEdge = alienInvaders[0] % width === 0
   const rightEdge = alienInvaders[alienInvaders.length - 1] % width === width -1
@@ -84,16 +94,20 @@ function moveInvaders() {
   }
 
   draw()
-
+function startOver(){
+  window.location.reload()
+}
   if (squares[currentShooterIndex].classList.contains('invader', 'shooter')) {
     resultsDisplay.innerHTML = 'GAME OVER'
     clearInterval(invadersId)
+    setTimeout(startOver, 3000)
   }
 
   for (let i = 0; i < alienInvaders.length; i++) {
     if(alienInvaders[i] > (squares.length)) {
       resultsDisplay.innerHTML = 'GAME OVER'
       clearInterval(invadersId)
+      setTimeout(startOver, 3000)
     }
   }
   if (aliensRemoved.length === alienInvaders.length) {
@@ -101,6 +115,7 @@ function moveInvaders() {
     clearInterval(invadersId)
   }
 }
+
 invadersId = setInterval(moveInvaders, 600)
 
 function shoot(e) {
@@ -132,7 +147,12 @@ function shoot(e) {
     case 'ArrowUp':
       laserId = setInterval(moveLaser, 100)
   }
+  document.querySelector('.shoot').onclick = function(){
+    laserId = setInterval(moveLaser, 100)
+  }
 }
 
-document.addEventListener('keydown', shoot) 
+document.addEventListener('keydown', shoot)
 document.querySelector('.shoot').addEventListener('click', shoot)
+
+

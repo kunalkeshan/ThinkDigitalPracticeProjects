@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     var ele = this.parentElement
                     let txt = ele.innerText
                     const arr = txt.match(/\w+|\S/g)
+                    //console.log(arr)
                     arr.pop()
                     arr.pop()
                     let a = arr[0].toUpperCase()
@@ -113,8 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
         listUpdate(taskVal)
         itemArr.push(taskVal)
         localStorage.setItem("itemArr", JSON.stringify(itemArr))
-        
-        
    }
    //function to search through the list items
    function searchfn(){

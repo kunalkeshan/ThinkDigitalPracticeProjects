@@ -117,9 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
    }
    //function to search through the list items
    function searchfn(){
-    var listItems = document.querySelectorAll('ul.taskList li')
-       var filter, i, txtValue
-       filter = searchInp.value.toUpperCase()
+    var listItems = document.querySelectorAll('ul.taskList li');
+       var filter, i, txtValue;
+       filter = searchInp.value.toUpperCase();
        for(i = 0; i < itemArr.length; i++){
            txtValue = itemArr[i]
            if(txtValue.toUpperCase().indexOf(filter) > -1){
